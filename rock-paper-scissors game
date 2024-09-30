@@ -1,0 +1,63 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+choices = [rock, paper, scissors]
+
+user_answer =input("What do you choose? Type 0 for Rock, 1 for Paper, and 2 for scissors.\n")
+
+if user_answer == '0':
+    print(rock)
+elif user_answer == '1':
+    print(paper)
+elif user_answer == '2':
+    print(scissors)
+else:
+    print("Wrong input. Please choose 0, 1, or 2")
+
+import random
+computer_choice = random.choice(choices)
+
+print(f"Computer chose:\n{computer_choice}")
+
+choice_names = ['rock', 'paper', 'scissors']
+user_choice_name = choice_names[int(user_answer)]
+
+
+if user_choice_name == 'rock' and computer_choice == 'rock':
+    print("It's a draw!")
+elif user_choice_name == 'paper' and computer_choice == 'peper':
+    print("It's a draw!")
+elif user_choice_name == "scissors" and computer_choice == 'scissors':
+    print("It's a draw!")
+elif user_choice_name == 'rock' and computer_choice == 'scissors':
+    print("You Win!")
+elif user_choice_name == 'paper' and computer_choice == 'rock':
+    print("You Win!")
+elif user_choice_name == 'scissors' and computer_choice == 'paper':
+    print("You Win!")
+else:
+    print("You Lose!")
